@@ -42,13 +42,13 @@ main = do
     let mcbs = mostCommonBits nums
     let gamma = binToNum mcbs
     let epsilon = binToNum . invert $ mcbs
-    putStr ("gamma: " ++ show gamma ++ "\n")
-    putStr ("epsilon: " ++ show epsilon ++ "\n")
-    putStr ("product: " ++ show (gamma * epsilon) ++ "\n\n")
+    putStrLn ("gamma: " ++ show gamma)
+    putStrLn ("epsilon: " ++ show epsilon)
+    putStrLn ("product: " ++ show (gamma * epsilon) ++ "\n")
 
     let ox = binToNum . mostCommonMatch $ nums
     let co2 = binToNum . leastCommonMatch $ nums
-    putStr ("ox: " ++ show ox ++ "\n")
-    putStr ("co2: " ++ show co2 ++ "\n")
-    putStr ("product: " ++ show (ox * co2) ++ "\n")
+    putStrLn ("ox: " ++ show ox)
+    putStrLn ("co2: " ++ show co2)
+    putStrLn ("product: " ++ show (ox * co2))
     hClose handle

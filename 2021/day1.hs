@@ -13,6 +13,6 @@ main = do
     content <- hGetContents handle
     let depthStrings = lines content
     let depths = map (read::String->Int) depthStrings
-    putStr ((show . countIncreases $ depths) ++ "\n")
-    putStr ((show . countSlidingIncreases $ depths) ++ "\n")
+    print (countIncreases depths)
+    print (countSlidingIncreases depths)
     hClose handle
